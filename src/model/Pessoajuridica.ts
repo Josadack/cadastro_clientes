@@ -39,16 +39,6 @@ export class PessoaJuridica extends Cliente{
 		this._inscricaoEstadual = value;
 	}
 
-    public calcularIdade():number{
-        const hoje = new Date();
-        let idade = hoje.getFullYear() - this.data.getFullYear();
-        const mes = hoje.getMonth() - this.data.getMonth();
-
-        if(mes < 0 || (mes === 0 && hoje.getDate() < this.data.getDate())){
-            idade--;
-        }
-        return idade;
-    }
 
 
     public visualizar(): void {
@@ -56,7 +46,7 @@ export class PessoaJuridica extends Cliente{
         console.log(`Razão Social do cliente: ${this._razaoSocial}`);  
         console.log(`CNPJ do cliente: ${this._cnpj}`);  
         console.log(`Inscrição Estadual: ${this._inscricaoEstadual}`);  
-        console.log(`Data de abertura do CNPJ: ${this.data}`);
+        console.log(`O CNPJ tem  ${this.calcularIdade()} anos de abertura`);
         
     }
 

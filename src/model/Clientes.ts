@@ -54,6 +54,17 @@ export abstract class Cliente {
 		this._tipo = value;
 	}
 
+    
+    public calcularIdade():number{
+        const hoje = new Date();
+        let idade = hoje.getFullYear() - this.data.getFullYear();
+        const mes = hoje.getMonth() - this.data.getMonth();
+
+        if(mes < 0 || (mes === 0 && hoje.getDate() < this.data.getDate())){
+            idade--;
+        }
+        return idade;
+    }
     //Metodos Visualizar
     public visualizar():void{
         let tipo:string;
@@ -63,17 +74,18 @@ export abstract class Cliente {
                 break;
             case 2:
                 tipo = "Pessoal Jurídica"
+                break;
                  default:
-                     console.log('Tipo inválido')
+                     tipo = ('Tipo inválido')
         }
 
-        console.log('-----------------------------');
+        console.log('\n-----------------------------');
         console.log(       'Dados do Cliente      ');
         console.log('-----------------------------');
         console.log(`ID ${this._id}`);
         console.log(`Endereço: ${this._endereco}`);
         console.log(`Telefone: ${this._telefone}`);
-        console.log(`É um Cliente : ${this.tipo}`);
+        console.log(`É um Cliente : ${tipo}`);
     }
 
 }

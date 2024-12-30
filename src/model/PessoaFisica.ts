@@ -40,24 +40,12 @@ export class PessoaFisica extends Cliente{
 	}
 
 
-    //Calcular Idade
-    public calcularIdade():number{
-        const hoje = new Date();
-        let idade = hoje.getFullYear() - this.data.getFullYear();
-        const mes = hoje.getMonth() - this.data.getMonth();
-
-        if(mes < 0 || (mes === 0 && hoje.getDate() < this.data.getDate())){
-            idade--;
-        }
-        return idade;
-    }
-
     public visualizar(): void {
         super.visualizar();
         console.log(`Nome do cliente: ${this._nome}`);
         console.log(`CPF do cliente: ${this._cpf}`);
         console.log(`Sexo: ${this._sexo}`);
-        console.log(`Idade do cliente: ${this.data}`)
+        console.log(`Idade do cliente: ${this.calcularIdade()} anos`); 
         
     }
 
