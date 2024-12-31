@@ -35,6 +35,12 @@ Este projeto é um sistema para cadastro e gestão de clientes, permitindo geren
 
 ---
 
+
+Entendi! Pela imagem, parece que a formatação do código e do texto não está sendo renderizada corretamente, o que pode estar gerando confusão. Vou organizar novamente para que fique bem formatado e consistente.
+
+Sistema de Cadastro de Clientes
+Este projeto é um sistema para cadastro e gestão de clientes, permitindo gerenciar informações de Pessoa Física e Pessoa Jurídica. O sistema é desenvolvido em TypeScript, utilizando conceitos de orientação a objetos.
+
 Instalação
 Siga os passos abaixo para configurar e executar o projeto:
 
@@ -43,7 +49,7 @@ Clone o repositório:
 bash
 Copiar código
 git clone https://github.com/seunome/projeto-cadastro-clientes.git
-Navegue até a pasta do projeto:
+Acesse a pasta do projeto:
 
 bash
 Copiar código
@@ -63,16 +69,17 @@ Execute o projeto:
 bash
 Copiar código
 node dist/index.js
-Nota: A localização do arquivo index.js pode variar conforme a estrutura de pastas.
+Nota: A localização do arquivo index.js pode variar dependendo da estrutura de pastas.
 
 Uso
-Exemplos de Uso
+Exemplos de Cadastro e Gestão de Clientes
 Cadastro de Clientes
+Cadastro de um cliente Pessoa Física:
+
 typescript
 Copiar código
 const clienteController = new ClienteController();
 
-// Cadastrar um cliente Pessoa Física
 clienteController.cadastrarCliente(
   new PessoaFisica(
     clienteController.gerarId(),
@@ -85,8 +92,10 @@ clienteController.cadastrarCliente(
     "M"
   )
 );
+Cadastro de um cliente Pessoa Jurídica:
 
-// Cadastrar um cliente Pessoa Jurídica
+typescript
+Copiar código
 clienteController.cadastrarCliente(
   new PessoaJuridica(
     clienteController.gerarId(),
@@ -104,13 +113,13 @@ clienteController.listarTodosClientes();
 Consultar Cliente por ID
 typescript
 Copiar código
-clienteController.consultarClientesPorId(1); // Substitua 1 pelo ID do cliente desejado
+clienteController.consultarClientesPorId(1); // Substitua "1" pelo ID desejado
 Atualizar Cliente
 typescript
 Copiar código
 clienteController.atualizarCliente(clienteAtualizado);
 Estrutura do Código
-A estrutura do projeto está organizada da seguinte forma:
+O projeto segue a seguinte estrutura:
 
 bash
 Copiar código
@@ -122,7 +131,7 @@ src/
 │   ├── PessoaFisica.ts       # Classe para Pessoa Física
 │   └── PessoaJuridica.ts     # Classe para Pessoa Jurídica
 ├── repository/
-│   └── ClienteRepository.ts  # Repositório para gerenciar a lista de clientes
+│   └── ClienteRepository.ts  # Repositório para gerenciar clientes
 ├── util/
 │   └── Menus.ts              # Utilitário para menus e interações
 └── index.ts                  # Ponto de entrada do projeto
