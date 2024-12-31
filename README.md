@@ -1,47 +1,33 @@
-# Sistema de Cadastro de Clientes
+Sistema de Cadastro de Clientes
+Este projeto é um sistema para cadastro e gestão de clientes, permitindo gerenciar informações de Pessoa Física e Pessoa Jurídica. O sistema é desenvolvido em TypeScript, utilizando conceitos de orientação a objetos para organizar e manter o código escalável.
 
-Este projeto é um sistema para cadastro e gestão de clientes, permitindo gerenciar informações de **Pessoa Física** e **Pessoa Jurídica**. O sistema é desenvolvido em **TypeScript**, utilizando conceitos de **orientação a objetos** para organizar e manter o código escalável.
-
----
-
-## Índice
-
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
-- [Uso](#uso)
-  - [Exemplos de Uso](#exemplos-de-uso)
-- [Estrutura do Código](#estrutura-do-código)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
-
----
-
-## Funcionalidades
-
-### Gerenciamento de Clientes
-- Cadastro de clientes do tipo **Pessoa Física**.
-- Cadastro de clientes do tipo **Pessoa Jurídica**.
-- Listagem de todos os clientes cadastrados.
-- Consulta de clientes por **ID**.
-- Atualização de dados de clientes.
-
----
-
-## Tecnologias Utilizadas
-
-- **TypeScript**: Para garantir maior segurança e escalabilidade no código.
-- **Node.js**: Ambiente de execução para JavaScript no servidor (se aplicável).
-
----
-
-## Instalação
-
+Índice
+Funcionalidades
+Tecnologias Utilizadas
+Instalação
+Uso
+Exemplos de Uso
+Estrutura do Código
+Contribuição
+Licença
+Funcionalidades
+Gerenciamento de Clientes
+Cadastro de clientes do tipo Pessoa Física.
+Cadastro de clientes do tipo Pessoa Jurídica.
+Listagem de todos os clientes cadastrados.
+Consulta de clientes por ID.
+Atualização de dados de clientes.
+Tecnologias Utilizadas
+TypeScript: Para garantir maior segurança e escalabilidade no código.
+Node.js: Ambiente de execução para JavaScript no servidor (se aplicável).
+Instalação
 Siga os passos abaixo para configurar e executar o projeto:
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seunome/projeto-cadastro-clientes.git
+Clone o repositório:
+
+bash
+Copiar código
+git clone https://github.com/seunome/projeto-cadastro-clientes.git
 Navegue até a pasta do projeto:
 
 bash
@@ -114,11 +100,9 @@ Para atualizar os dados de um cliente:
 typescript
 Copiar código
 clienteController.atualizarCliente(clienteAtualizado);
+
 Estrutura do Código
 A estrutura do projeto é organizada da seguinte forma:
-
-bash
-Copiar código
 src/
 ├── controller/
 │   └── ClienteController.ts  # Controlador para gerenciar clientes
@@ -131,3 +115,5 @@ src/
 ├── util/
 │   └── Menus.ts              # Utilitário para menus e interações
 └── index.ts                  # Ponto de entrada do projeto
+
+
