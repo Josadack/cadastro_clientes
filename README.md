@@ -35,13 +35,14 @@ Este projeto é um sistema para cadastro e gestão de clientes, permitindo geren
 
 ---
 
-## Instalação
-
+Instalação
 Siga os passos abaixo para configurar e executar o projeto:
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seunome/projeto-cadastro-clientes.git
+Clone o repositório:
+
+bash
+Copiar código
+git clone https://github.com/seunome/projeto-cadastro-clientes.git
 Navegue até a pasta do projeto:
 
 bash
@@ -97,25 +98,19 @@ clienteController.cadastrarCliente(
   )
 );
 Listar Todos os Clientes
-Para listar todos os clientes cadastrados:
-
 typescript
 Copiar código
 clienteController.listarTodosClientes();
 Consultar Cliente por ID
-Para consultar um cliente específico pelo ID:
-
 typescript
 Copiar código
 clienteController.consultarClientesPorId(1); // Substitua 1 pelo ID do cliente desejado
 Atualizar Cliente
-Para atualizar os dados de um cliente:
-
 typescript
 Copiar código
 clienteController.atualizarCliente(clienteAtualizado);
 Estrutura do Código
-A estrutura do projeto é organizada da seguinte forma:
+A estrutura do projeto está organizada da seguinte forma:
 
 bash
 Copiar código
