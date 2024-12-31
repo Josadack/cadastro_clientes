@@ -1,3 +1,71 @@
+# Sistema de Cadastro de Clientes
+
+Este projeto é um sistema para cadastro e gestão de clientes, permitindo gerenciar informações de **Pessoa Física** e **Pessoa Jurídica**. O sistema é desenvolvido em **TypeScript**, utilizando conceitos de **orientação a objetos** para organizar e manter o código escalável.
+
+---
+
+## Índice
+
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Uso](#uso)
+  - [Exemplos de Uso](#exemplos-de-uso)
+- [Estrutura do Código](#estrutura-do-código)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+
+---
+
+## Funcionalidades
+
+### Gerenciamento de Clientes
+- Cadastro de clientes do tipo **Pessoa Física**.
+- Cadastro de clientes do tipo **Pessoa Jurídica**.
+- Listagem de todos os clientes cadastrados.
+- Consulta de clientes por **ID**.
+- Atualização de dados de clientes.
+
+---
+
+## Tecnologias Utilizadas
+
+- **TypeScript**: Para garantir maior segurança e escalabilidade no código.
+- **Node.js**: Ambiente de execução para JavaScript no servidor (se aplicável).
+
+---
+
+## Instalação
+
+Siga os passos abaixo para configurar e executar o projeto:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seunome/projeto-cadastro-clientes.git
+Navegue até a pasta do projeto:
+
+bash
+Copiar código
+cd projeto-cadastro-clientes
+Instale as dependências:
+
+bash
+Copiar código
+npm install
+Compile o código TypeScript:
+
+bash
+Copiar código
+tsc
+Execute o projeto:
+
+bash
+Copiar código
+node dist/index.js
+Nota: A localização do arquivo index.js pode variar conforme a estrutura de pastas.
+
+Uso
+Exemplos de Uso
 Cadastro de Clientes
 typescript
 Copiar código
@@ -16,6 +84,18 @@ clienteController.cadastrarCliente(
     "M"
   )
 );
+
+// Cadastrar um cliente Pessoa Jurídica
+clienteController.cadastrarCliente(
+  new PessoaJuridica(
+    clienteController.gerarId(),
+    "Empresa X",
+    "Avenida Principal, 456",
+    "1123456789",
+    "00.123.456/0001-89",
+    100
+  )
+);
 Listar Todos os Clientes
 Para listar todos os clientes cadastrados:
 
@@ -23,7 +103,7 @@ typescript
 Copiar código
 clienteController.listarTodosClientes();
 Consultar Cliente por ID
-Para consultar um cliente específico pelo seu ID:
+Para consultar um cliente específico pelo ID:
 
 typescript
 Copiar código
@@ -33,9 +113,9 @@ Para atualizar os dados de um cliente:
 
 typescript
 Copiar código
-clienteController.atualizarCliente(cliente);
+clienteController.atualizarCliente(clienteAtualizado);
 Estrutura do Código
-A estrutura de pastas do projeto é a seguinte:
+A estrutura do projeto é organizada da seguinte forma:
 
 bash
 Copiar código
